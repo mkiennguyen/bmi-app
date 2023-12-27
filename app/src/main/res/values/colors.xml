@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bmi_text_color"> #eb6e62 </color>
+    <color name="bmi_title_color">#28a28a</color>
+    <color name="bmi_text_color_1">#505050</color>
+    <color name="bmi_text_color_2">#c5c9cb</color>
+    <color name="bmi_btn_color">#88cfc7</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="genders" type="id" />
+    <item name="bmi_female" type="id" />
+    <item name="bmi_female_icon" type="id" />
+</resources>

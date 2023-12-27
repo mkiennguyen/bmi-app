@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <!--    results-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/bmi_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24.4"
+            android:textColor="@color/bmi_text_color"
+            android:textSize="85dp"
+            app:layout_constraintLeft_toLeftOf="@id/result"
+            app:layout_constraintRight_toRightOf="@id/result"
+            app:layout_constraintTop_toTopOf="@id/result" />
+
+        <TextView
+            android:id="@+id/bmi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Healthy"
+            android:textColor="@color/bmi_title_color"
+            android:textSize="35dp"
+            app:layout_constraintLeft_toLeftOf="@id/bmi_index"
+            app:layout_constraintRight_toRightOf="@id/bmi_index"
+            app:layout_constraintTop_toBottomOf="@id/bmi_index" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    genders-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/genders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result"
+
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bmi_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chooseGenderMale"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/genders">
+
+            <TextView
+                android:id="@+id/bmi_male_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/bmi_text_color_1"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="@id/bmi_male"
+                app:layout_constraintRight_toRightOf="@id/bmi_male"
+                app:layout_constraintTop_toTopOf="@id/bmi_male" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_male_100"
+                app:layout_constraintTop_toBottomOf="@id/bmi_male_icon"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bmi_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:onClick="chooseGenderFemale"
+            app:layout_constraintLeft_toRightOf="@id/bmi_male"
+            app:layout_constraintTop_toTopOf="@id/genders">
+
+            <TextView
+                android:id="@+id/bmi_female_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/bmi_text_color_1"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="@id/bmi_female"
+                app:layout_constraintRight_toRightOf="@id/bmi_female"
+                app:layout_constraintTop_toTopOf="@id/bmi_female"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_female_100"
+                app:layout_constraintTop_toBottomOf="@id/bmi_female_icon"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    indexs -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info"
+        android:layout_width="394dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genders"
+        app:layout_constraintWidth_percent="1"
+
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/info"
+            app:layout_constraintTop_toTopOf="@id/info"
+            app:layout_constraintWidth_percent="0.33">
+
+            <TextView
+                android:id="@+id/info_age_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textColor="@color/bmi_text_color_2"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="@id/info_age"
+                app:layout_constraintRight_toRightOf="@id/info_age"
+                app:layout_constraintTop_toTopOf="@id/info_age" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                app:layout_constraintLeft_toLeftOf="@id/info_age"
+                app:layout_constraintRight_toRightOf="@id/info_age"
+                app:layout_constraintTop_toBottomOf="@id/info_age_name"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:textSize="32dp"
+                android:textFontWeight="@integer/material_motion_duration_medium_2"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/info_age"
+            app:layout_constraintTop_toTopOf="@id/info"
+            app:layout_constraintWidth_percent="0.33">
+
+            <TextView
+                android:id="@+id/info_height_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textColor="@color/bmi_text_color_2"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="@id/info_height"
+                app:layout_constraintRight_toRightOf="@id/info_height"
+                app:layout_constraintTop_toTopOf="@id/info_height" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                app:layout_constraintLeft_toLeftOf="@id/info_height"
+                app:layout_constraintRight_toRightOf="@id/info_height"
+                app:layout_constraintTop_toBottomOf="@id/info_height_name"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:textSize="32dp"
+                android:textFontWeight="@integer/material_motion_duration_medium_2"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/info_height"
+            app:layout_constraintTop_toTopOf="@id/info"
+            app:layout_constraintWidth_percent="0.33">
+
+            <TextView
+                android:id="@+id/info_weight_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textColor="@color/bmi_text_color_2"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="@id/info_weight"
+                app:layout_constraintRight_toRightOf="@id/info_weight"
+                app:layout_constraintTop_toTopOf="@id/info_weight" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                app:layout_constraintLeft_toLeftOf="@id/info_weight"
+                app:layout_constraintRight_toRightOf="@id/info_weight"
+                app:layout_constraintTop_toBottomOf="@id/info_weight_name"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:textSize="32dp"
+                android:textFontWeight="@integer/material_motion_duration_medium_2"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    btn-->
+    <Button
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Caculate BMI"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="1"
+            android:padding="15dp"
+            android:backgroundTint="@color/bmi_btn_color"
+            android:onClick="calculateBMI"
+            />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
