@@ -27,7 +27,7 @@
             android:id="@+id/bmi_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="24.4"
+            android:text="0"
             android:textColor="@color/bmi_text_color"
             android:textSize="85dp"
             app:layout_constraintLeft_toLeftOf="@id/result"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Healthy"
+            android:text=""
             android:textColor="@color/bmi_title_color"
             android:textSize="35dp"
             app:layout_constraintLeft_toLeftOf="@id/bmi_index"
@@ -245,24 +245,23 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    btn-->
-    <Button
-            android:id="@+id/btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Caculate BMI"
-            android:textColor="@color/white"
-            android:textSize="26dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintWidth_percent="1"
-            android:padding="15dp"
-            android:backgroundTint="@color/bmi_btn_color"
-            android:onClick="calculateBMI"
-            />
-
-
-
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bmi_btn_color"
+        android:onClick="calculateBMI"
+        android:padding="15dp"
+        android:text="Caculate BMI"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="1"
+        android:textAlignment="center"
+        android:clickable="true"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

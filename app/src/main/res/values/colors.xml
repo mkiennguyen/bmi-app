@@ -7,4 +7,9 @@
     <color name="bmi_text_color_1">#505050</color>
     <color name="bmi_text_color_2">#c5c9cb</color>
     <color name="bmi_btn_color">#88cfc7</color>
+    <color name="bmi_thin_color">#CE5A67</color>
+    <color name="bmi_big_color">#FFBB5C</color>
+    <color name="bmi_fat_color">#9F91CC</color>
+    <color name="bmi_fat_2_color">#7360DF </color>
+    <color name="bmi_fat_3_color">#3D246C</color>
 </resources>
